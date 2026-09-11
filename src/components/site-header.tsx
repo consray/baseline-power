@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, Phone, X, Zap } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { company } from "@/lib/company";
+import logo from "@/assets/baseline-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -28,14 +29,14 @@ export function SiteHeader() {
       </div>
 
       <div className="container-page flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-2.5">
-          <span className="flex size-9 items-center justify-center rounded bg-primary text-primary-foreground">
-            <Zap className="size-5" aria-hidden="true" />
-          </span>
-          <span className="leading-tight">
-            <span className="block text-sm font-bold tracking-tight">{company.name}</span>
-            <span className="block text-[11px] text-muted-foreground">Engineering · Solar · Fire</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img
+            src={logo.url}
+            alt={`${company.name} logo`}
+            width={256}
+            height={98}
+            className="h-11 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Main">

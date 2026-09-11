@@ -72,30 +72,30 @@
 :root {
   --radius: 0.375rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.19 0.015 260);
-  --surface: oklch(0.972 0.006 255);
-  --surface-foreground: oklch(0.19 0.015 260);
+  --foreground: oklch(0.2 0.008 40);
+  --surface: oklch(0.972 0.005 60);
+  --surface-foreground: oklch(0.2 0.008 40);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.19 0.015 260);
+  --card-foreground: oklch(0.2 0.008 40);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.19 0.015 260);
-  --primary: oklch(0.52 0.253 264.5);
+  --popover-foreground: oklch(0.2 0.008 40);
+  --primary: oklch(0.55 0.215 28);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.72 0.191 50);
-  --secondary-foreground: oklch(0.16 0.01 260);
-  --brand: oklch(0.16 0.02 262);
-  --brand-foreground: oklch(0.98 0.003 255);
+  --secondary: oklch(0.68 0.185 45);
+  --secondary-foreground: oklch(0.16 0.01 40);
+  --brand: oklch(0.18 0.008 40);
+  --brand-foreground: oklch(0.98 0.003 60);
   --whatsapp: oklch(0.73 0.184 148);
   --whatsapp-foreground: oklch(0.16 0.01 260);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.5 0.02 258);
-  --accent: oklch(0.96 0.03 250);
-  --accent-foreground: oklch(0.35 0.15 264);
+  --muted: oklch(0.968 0.004 60);
+  --muted-foreground: oklch(0.5 0.012 40);
+  --accent: oklch(0.96 0.025 35);
+  --accent-foreground: oklch(0.45 0.19 28);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.925 0.006 50);
+  --input: oklch(0.925 0.006 50);
+  --ring: oklch(0.55 0.215 28);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -144,10 +144,10 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
-  --brand: oklch(0.16 0.02 262);
-  --brand-foreground: oklch(0.98 0.003 255);
-  --surface: oklch(0.22 0.02 260);
-  --surface-foreground: oklch(0.98 0.003 255);
+  --brand: oklch(0.16 0.008 40);
+  --brand-foreground: oklch(0.98 0.003 60);
+  --surface: oklch(0.22 0.008 40);
+  --surface-foreground: oklch(0.98 0.003 60);
 }
 
 @layer base {

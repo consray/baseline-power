@@ -1,17 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone, Zap } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { company, serviceGroups } from "@/lib/company";
+import logo from "@/assets/baseline-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="mt-24 bg-brand text-brand-foreground">
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded bg-primary text-primary-foreground">
-              <Zap className="size-5" aria-hidden="true" />
-            </span>
-            <span className="text-sm font-bold">{company.name}</span>
+          <div className="w-fit rounded bg-background p-2.5">
+            <img src={logo.url} alt={`${company.name} logo`} width={256} height={98} className="h-10 w-auto" />
           </div>
           <p className="mt-4 text-sm text-brand-foreground/70">
             {company.tagline}. Licensed contractors serving residential, commercial, industrial and
