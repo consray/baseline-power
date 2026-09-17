@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
-import { budgets, buildingTypes, company, counties, serviceGroups, whatsappLink } from "@/lib/company";
+import {
+  budgets,
+  buildingTypes,
+  company,
+  counties,
+  serviceGroups,
+  whatsappLink,
+} from "@/lib/company";
 
 const serviceOptions = serviceGroups.flatMap((g) => g.items.map((i) => `${g.name} — ${i.title}`));
 
@@ -36,13 +43,19 @@ export function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-border bg-card p-6 shadow-sm">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <label className="grid gap-1.5 text-sm font-medium">
+    <form onSubmit={handleSubmit} className="grid gap-3 rounded border border-border bg-card p-5">
+      <div className="grid gap-3 sm:grid-cols-2">
+        <label className="grid gap-1 text-sm font-medium">
           Your name
-          <input className={fieldClass} value={name} onChange={(e) => setName(e.target.value)} required placeholder="Jane Wanjiru" />
+          <input
+            className={fieldClass}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            placeholder="Jane Wanjiru"
+          />
         </label>
-        <label className="grid gap-1.5 text-sm font-medium">
+        <label className="grid gap-1 text-sm font-medium">
           Phone number
           <input
             className={fieldClass}
@@ -55,21 +68,29 @@ export function QuoteForm() {
         </label>
         <label className="grid gap-1.5 text-sm font-medium sm:col-span-2">
           Service needed
-          <select className={fieldClass} value={service} onChange={(e) => setService(e.target.value)}>
+          <select
+            className={fieldClass}
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+          >
             {serviceOptions.map((s) => (
               <option key={s}>{s}</option>
             ))}
           </select>
         </label>
-        <label className="grid gap-1.5 text-sm font-medium">
+        <label className="grid gap-1 text-sm font-medium">
           Building type
-          <select className={fieldClass} value={building} onChange={(e) => setBuilding(e.target.value)}>
+          <select
+            className={fieldClass}
+            value={building}
+            onChange={(e) => setBuilding(e.target.value)}
+          >
             {buildingTypes.map((s) => (
               <option key={s}>{s}</option>
             ))}
           </select>
         </label>
-        <label className="grid gap-1.5 text-sm font-medium">
+        <label className="grid gap-1 text-sm font-medium">
           County
           <select className={fieldClass} value={county} onChange={(e) => setCounty(e.target.value)}>
             {counties.map((s) => (
@@ -98,14 +119,14 @@ export function QuoteForm() {
 
       <button
         type="submit"
-        className="inline-flex h-12 items-center justify-center gap-2 rounded bg-whatsapp px-6 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90"
+        className="inline-flex h-11 items-center justify-center gap-2 rounded bg-whatsapp px-5 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90"
       >
         <MessageCircle className="size-5" aria-hidden="true" />
         Send request on WhatsApp
       </button>
       <p className="text-xs text-muted-foreground">
-        Your answers are formatted into a WhatsApp message and sent to our team. We respond within one
-        working hour.
+        Your answers are formatted into a WhatsApp message and sent to our team. We respond within
+        one working hour.
       </p>
     </form>
   );
