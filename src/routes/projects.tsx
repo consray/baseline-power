@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { projects, projectCategories, type Project, type ProjectCategory } from "@/lib/projects";
-import { company, whatsappLink } from "@/lib/company";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectFilter } from "@/components/project-filter";
 import { ProjectDetail } from "@/components/project-detail";
@@ -88,14 +87,6 @@ function Projects() {
             >
               Discuss Your Project <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
-            <a
-              href={whatsappLink(`Hello ${company.name}, I'd like to discuss a project.`)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded bg-whatsapp px-5 text-sm font-semibold text-whatsapp-foreground hover:opacity-90"
-            >
-              <MessageCircle className="size-4" aria-hidden="true" /> Chat on WhatsApp
-            </a>
           </div>
         </div>
       </section>

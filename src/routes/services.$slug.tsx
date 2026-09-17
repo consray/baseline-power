@@ -1,9 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import electricalImg from "@/assets/electrical.jpg";
 import solarImg from "@/assets/solar.jpg";
 import fireImg from "@/assets/fire.jpg";
-import { company, serviceGroups, whatsappLink } from "@/lib/company";
+import { company, serviceGroups } from "@/lib/company";
 
 const images: Record<string, string> = {
   electrical: electricalImg,
@@ -71,14 +71,6 @@ function ServiceDetail() {
               >
                 Request a quote <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
-              <a
-                href={whatsappLink(`Hello ${company.name}, I need help with ${group.name}.`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 items-center gap-2 rounded bg-whatsapp px-5 text-sm font-semibold text-whatsapp-foreground hover:opacity-90"
-              >
-                <MessageCircle className="size-4" aria-hidden="true" /> WhatsApp
-              </a>
               <a
                 href={company.phoneHref}
                 className="inline-flex h-11 items-center gap-2 rounded border border-border px-5 text-sm font-semibold hover:bg-accent"
