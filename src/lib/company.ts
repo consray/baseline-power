@@ -8,7 +8,7 @@ export const company = {
   emergency: "+254 700 000 001",
   whatsapp: "254700000000",
   email: "info@baselinepower.co.ke",
-  address: "Enterprise Road, Industrial Area, Nairobi, Kenya",
+  address: "10 Masaba Rd, Nairobi, Kenya",
   hours: "Mon–Fri 8:00am–5:30pm · Sat 8:00am–1:00pm · 24/7 emergency response",
 } as const;
 

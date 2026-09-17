@@ -41,7 +41,7 @@ export const Route = createFileRoute("/")({
           email: company.email,
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Enterprise Road, Industrial Area",
+            streetAddress: "10 Masaba Rd",
             addressLocality: "Nairobi",
             addressCountry: "KE",
           },
@@ -346,7 +346,7 @@ function Home() {
         <div className="overflow-hidden rounded border border-border">
           <iframe
             title="Baseline Power Systems office location on Google Maps"
-            src="https://www.google.com/maps?q=Enterprise%20Road%20Industrial%20Area%20Nairobi&output=embed"
+            src="https://www.google.com/maps?q=10+Masaba+Rd+Nairobi+Kenya&output=embed"
             loading="lazy"
             className="h-72 w-full"
           />

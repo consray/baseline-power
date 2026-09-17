@@ -147,7 +147,7 @@ function Contact() {
           <div className="overflow-hidden rounded border border-border">
             <iframe
               title="Baseline Power Systems office location"
-              src="https://www.google.com/maps?q=Enterprise%20Road%20Industrial%20Area%20Nairobi&output=embed"
+              src="https://www.google.com/maps?q=10+Masaba+Rd+Nairobi+Kenya&output=embed"
               loading="lazy"
               className="h-64 w-full"
             />
