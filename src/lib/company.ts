@@ -3,10 +3,10 @@ export const company = {
   short: "Baseline Power",
   tagline: "Electrical, solar and fire safety engineering across Kenya",
   // TODO: replace the placeholder contact details below with the real ones.
-  phone: "+254 700 000 000",
-  phoneHref: "tel:+254700000000",
+  phone: "+254 704 777 877",
+  phoneHref: "tel:+254704777877",
   emergency: "+254 700 000 001",
-  whatsapp: "254700000000",
+  whatsapp: "254704777877",
   email: "info@baselinepower.co.ke",
   address: "10 Masaba Rd, Nairobi, Kenya",
   hours: "Mon–Fri 8:00am–5:30pm · Sat 8:00am–1:00pm · 24/7 emergency response",
