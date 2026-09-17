@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, ShieldCheck, Wrench } from "lucide-react";
 import { QuoteForm } from "@/components/quote-form";
 import { company } from "@/lib/company";
 
@@ -15,7 +14,8 @@ export const Route = createFileRoute("/quote")({
       { property: "og:title", content: "Request a Free Quote | Baseline Power Systems" },
       {
         property: "og:description",
-        content: "Fast WhatsApp quotations for electrical, solar and fire protection projects across Kenya.",
+        content:
+          "Fast WhatsApp quotations for electrical, solar and fire protection projects across Kenya.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/quote" },
@@ -27,34 +27,38 @@ export const Route = createFileRoute("/quote")({
 });
 
 const perks = [
-  { icon: Clock, title: "Reply within the hour", text: "Working hours responses from a real engineer, not a call centre." },
-  { icon: ShieldCheck, title: "Licensed and insured", text: "EPRA and NCA registered teams with full public liability cover." },
-  { icon: Wrench, title: "Free site survey", text: "We measure loads and roof space before quoting a single shilling." },
+  {
+    title: "Reply within the hour",
+    text: "Working hours responses from a real engineer, not a call centre.",
+  },
+  {
+    title: "Licensed and insured",
+    text: "EPRA and NCA registered teams with full public liability cover.",
+  },
+  {
+    title: "Free site survey",
+    text: "We measure loads and roof space before quoting a single shilling.",
+  },
 ];
 
 function QuotePage() {
   return (
-    <div className="container-page grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+    <div className="container-page grid gap-8 py-12 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
-        <h1 className="text-4xl font-bold sm:text-5xl">Get a free quotation</h1>
-        <p className="mt-4 max-w-xl text-muted-foreground">
+        <h1 className="text-3xl font-bold sm:text-4xl">Get a free quotation</h1>
+        <p className="mt-3 max-w-xl text-muted-foreground">
           Answer five quick questions. We format them into a WhatsApp message so our engineers have
           everything they need to price your works accurately.
         </p>
-        <ul className="mt-10 space-y-6">
+        <dl className="mt-8 space-y-4">
           {perks.map((p) => (
-            <li key={p.title} className="flex gap-4">
-              <span className="flex size-10 shrink-0 items-center justify-center rounded bg-accent text-accent-foreground">
-                <p.icon className="size-5" aria-hidden="true" />
-              </span>
-              <div>
-                <h2 className="font-semibold">{p.title}</h2>
-                <p className="text-sm text-muted-foreground">{p.text}</p>
-              </div>
-            </li>
+            <div key={p.title} className="border-l-2 border-primary pl-4">
+              <dt className="font-semibold">{p.title}</dt>
+              <dd className="mt-1 text-sm text-muted-foreground">{p.text}</dd>
+            </div>
           ))}
-        </ul>
-        <p className="mt-10 text-sm text-muted-foreground">
+        </dl>
+        <p className="mt-8 text-sm text-muted-foreground">
           Prefer to talk? Call {company.phone} or email {company.email}.
         </p>
       </div>
