@@ -1,16 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { company, serviceGroups } from "@/lib/company";
-import logo from "@/assets/baseline-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 bg-brand text-brand-foreground">
+    <footer className="mt-16 bg-brand text-brand-foreground">
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
-          <div className="w-fit rounded bg-background p-2.5">
-            <img src={logo.url} alt={`${company.name} logo`} width={256} height={98} className="h-10 w-auto" />
-          </div>
+          <img
+            src="/logo.png"
+            alt={`${company.name} logo`}
+            width={256}
+            height={98}
+            className="h-10 w-auto"
+          />
           <p className="mt-4 text-sm text-brand-foreground/70">
             {company.tagline}. Licensed contractors serving residential, commercial, industrial and
             government clients.
@@ -22,7 +25,11 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-brand-foreground/70">
             {serviceGroups.map((g) => (
               <li key={g.slug}>
-                <Link to="/services/$slug" params={{ slug: g.slug }} className="hover:text-secondary">
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: g.slug }}
+                  className="hover:text-secondary"
+                >
                   {g.name}
                 </Link>
               </li>

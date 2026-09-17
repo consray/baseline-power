@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { company } from "@/lib/company";
-import logo from "@/assets/baseline-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,9 +12,42 @@ const nav = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
+  useEffect(() => {
+    function onScroll() {
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const delta = scrollY - lastScrollY.current;
+
+          if (scrollY < 10) {
+            setHidden(false);
+          } else if (delta > 8) {
+            setHidden(true);
+          } else if (delta < -8) {
+            setHidden(false);
+          }
+
+          lastScrollY.current = scrollY;
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
+    <header
+      className={`fixed top-0 right-0 left-0 z-40 border-b border-border bg-background/95 backdrop-blur transition-transform duration-300 ease-in-out ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="hidden bg-brand text-brand-foreground md:block">
         <div className="container-page flex h-9 items-center justify-between text-xs">
           <p>{company.address}</p>
@@ -31,7 +63,7 @@ export function SiteHeader() {
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex items-center">
           <img
-            src={logo.url}
+            src="/logo.png"
             alt={`${company.name} logo`}
             width={256}
             height={98}
