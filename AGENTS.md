@@ -1,16 +1,3 @@
-<!-- LOVABLE:BEGIN -->
-
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-
-<!-- LOVABLE:END -->
-
 ## Project Overview
 
 - **Framework**: TanStack Start (React + SSR) with Vite, Tailwind CSS v4, TypeScript
@@ -41,7 +28,6 @@ src/
 │   ├── services.index.tsx
 │   └── services.$slug.tsx
 ├── components/          # Reusable UI components
-│   ├── ui/              # shadcn/ui components (Radix + Tailwind)
 │   ├── quote-form.tsx
 │   ├── whatsapp-button.tsx
 │   ├── site-header.tsx
@@ -49,8 +35,7 @@ src/
 ├── lib/                 # Utilities & error handling
 │   ├── error-page.ts    # Custom 500 error page
 │   ├── error-capture.ts # SSR error capture
-│   ├── company.ts       # Company config
-│   └── utils.ts         # cn(), etc.
+│   └── company.ts       # Company config
 ├── router.tsx           # Router factory with QueryClient
 ├── start.ts             # TanStack Start middleware (CSRF + error boundary)
 ├── server.ts            # Cloudflare/Nitro entry (wraps TanStack Start)
@@ -70,10 +55,8 @@ src/
 
 - Uses `@lovable.dev/vite-tanstack-config` which bundles: TanStack Start, React, Tailwind, tsConfigPaths, Nitro (Cloudflare), devtools, error logger
 - **Do not manually add** those plugins to `vite.config.ts` — they'll conflict
-- Bun's 24h supply-chain guard is active; exceptions in `bunfig.toml`
 
 ## Development Notes
 
 - Route tree is auto-generated — edit `src/routes/` files, not `routeTree.gen.ts`
-- UI components use shadcn/ui patterns (Radix + class-variance-authority + tailwind-merge)
 - React 19, TanStack Router v1, TanStack Start v1
