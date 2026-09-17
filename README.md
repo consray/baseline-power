@@ -1,456 +1,456 @@
 # Kenya Powerhouse
 
-Build a world-class website for an electrical engineering company in Kenya 
+Build a world-class website for an electrical engineering company in Kenya
 
-Create a premium, enterprise-grade website for [Company Name], a company that provides electrical, solar energy, fire safety, and engineering services across Kenya. 
+Create a premium, enterprise-grade website for [Company Name], a company that provides electrical, solar energy, fire safety, and engineering services across Kenya.
 
-The website should target residential, commercial, industrial, government, schools, hospitals, apartments, warehouses, hotels, factories, and real estate developers. 
+The website should target residential, commercial, industrial, government, schools, hospitals, apartments, warehouses, hotels, factories, and real estate developers.
 
-The design must feel modern, trustworthy, technical, and conversionfocused, similar to Schneider Electric, ABB, Siemens, and leading engineering firms. 
+The design must feel modern, trustworthy, technical, and conversionfocused, similar to Schneider Electric, ABB, Siemens, and leading engineering firms.
 
---- 
+---
 
-Brand Identity 
+Brand Identity
 
-- Style: Minimalist, professional, corporate. 
+- Style: Minimalist, professional, corporate.
 
-- Colors: 
+- Colors:
 
-- Primary: Electric Blue (#0057FF) 
+- Primary: Electric Blue (#0057FF)
 
-- Secondary: Orange (#FF7A00) 
+- Secondary: Orange (#FF7A00)
 
-- Accent: White, Dark Gray, Black. 
+- Accent: White, Dark Gray, Black.
 
-- Typography: Inter or Poppins. 
+- Typography: Inter or Poppins.
 
-- Icons: Clean engineering-style icons. 
+- Icons: Clean engineering-style icons.
 
-- Layout: Responsive mobile-first design. 
+- Layout: Responsive mobile-first design.
 
---- 
+---
 
-Website Structure 
+Website Structure
 
-Home 
+Home
 
-- Hero banner with electrical technicians and solar installations. 
+- Hero banner with electrical technicians and solar installations.
 
-- CTA buttons: 
+- CTA buttons:
 
-- Get a Free Quote 
+- Get a Free Quote
 
-- WhatsApp Us 
+- WhatsApp Us
 
-- Call Now 
+- Call Now
 
-- Services overview. 
+- Services overview.
 
-- Company statistics. 
+- Company statistics.
 
-- Client testimonials. 
+- Client testimonials.
 
-- Featured projects. 
+- Featured projects.
 
-- Brands and certifications. 
+- Brands and certifications.
 
-- Google Map. 
+- Google Map.
 
-- WhatsApp floating button. 
+- WhatsApp floating button.
 
-About Us 
+About Us
 
-- Company history. 
+- Company history.
 
-- Mission, vision, values. 
+- Mission, vision, values.
 
-- Team profiles. 
+- Team profiles.
 
-- Licenses and certifications. 
+- Licenses and certifications.
 
-- Safety policy. 
+- Safety policy.
 
-# Services 
+# Services
 
-Create individual SEO pages for each service. 
+Create individual SEO pages for each service.
 
-Electrical Services 
+Electrical Services
 
-- Electrical installations. 
+- Electrical installations.
 
-- Wiring and rewiring. 
+- Wiring and rewiring.
 
-- Power distribution. 
+- Power distribution.
 
-- Generator installation. 
+- Generator installation.
 
-- Electrical maintenance. 
+- Electrical maintenance.
 
-- Lighting systems. 
+- Lighting systems.
 
-- Smart home automation. 
+- Smart home automation.
 
-- Electrical inspections. 
+- Electrical inspections.
 
-Solar Services 
+Solar Services
 
-- Residential solar systems. 
+- Residential solar systems.
 
-- Commercial solar systems. 
+- Commercial solar systems.
 
-- Industrial solar plants. 
+- Industrial solar plants.
 
-- Solar water heaters. 
+- Solar water heaters.
 
-- Inverters. 
+- Inverters.
 
-- Battery storage. 
+- Battery storage.
 
-- Solar maintenance. 
+- Solar maintenance.
 
-- Energy audits. 
+- Energy audits.
 
-# Fire Protection 
+# Fire Protection
 
-- Fire alarm systems. 
+- Fire alarm systems.
 
-- Fire extinguishers. 
+- Fire extinguishers.
 
-- Fire hydrants. 
+- Fire hydrants.
 
-- Sprinkler systems. 
+- Sprinkler systems.
 
-- Smoke detectors. 
+- Smoke detectors.
 
-- Emergency lighting. 
+- Emergency lighting.
 
-- Fire suppression systems. 
+- Fire suppression systems.
 
-- Fire risk assessment. 
+- Fire risk assessment.
 
-# Industries Served 
+# Industries Served
 
-Separate landing pages for: 
+Separate landing pages for:
 
-- Residential. 
+- Residential.
 
-- Commercial buildings. 
+- Commercial buildings.
 
-- Manufacturing. 
+- Manufacturing.
 
-- Healthcare. 
+- Healthcare.
 
-- Schools. 
+- Schools.
 
-- Hotels. 
+- Hotels.
 
-- Agriculture. 
+- Agriculture.
 
-- Government projects. 
+- Government projects.
 
-# Projects Portfolio 
+# Projects Portfolio
 
-# Each project should include: 
+# Each project should include:
 
-- Images. 
+- Images.
 
-- Before/after. 
+- Before/after.
 
-- Services delivered. 
+- Services delivered.
 
-- Location. 
+- Location.
 
-- Client category. 
+- Client category.
 
-# Shop 
+# Shop
 
-# Products: 
+# Products:
 
-- Solar panels. 
+- Solar panels.
 
-- Inverters. 
+- Inverters.
 
-- Batteries. 
+- Batteries.
 
-- Electrical cables. 
+- Electrical cables.
 
-- Circuit breakers. 
+- Circuit breakers.
 
-- Switchgear. 
+- Switchgear.
 
-- Fire extinguishers. 
+- Fire extinguishers.
 
-- Smoke detectors. 
+- Smoke detectors.
 
-- Safety equipment. 
+- Safety equipment.
 
-# Each product page includes: 
+# Each product page includes:
 
-- Images. 
+- Images.
 
-- Specifications. 
+- Specifications.
 
-- Price request. 
+- Price request.
 
-- WhatsApp order. 
+- WhatsApp order.
 
-Blog 
+Blog
 
-Create SEO blog section with categories: 
+Create SEO blog section with categories:
 
-- Electrical Safety. 
+- Electrical Safety.
 
-- Solar Energy. 
+- Solar Energy.
 
-- Fire Safety. 
+- Fire Safety.
 
-- Energy Saving. 
+- Energy Saving.
 
-- Industrial Engineering. 
+- Industrial Engineering.
 
-- Smart Homes. 
+- Smart Homes.
 
---- 
+---
 
-# WhatsApp Quotation System 
+# WhatsApp Quotation System
 
-Build an automated quotation form. 
+Build an automated quotation form.
 
-Customer selects: 
+Customer selects:
 
-- Service. 
+- Service.
 
-- Building type. 
+- Building type.
 
-- County. 
+- County.
 
-- Budget. 
+- Budget.
 
-- Phone number. 
+- Phone number.
 
-Generate a formatted WhatsApp message automatically and open WhatsApp Business. 
+Generate a formatted WhatsApp message automatically and open WhatsApp Business.
 
-Also allow product orders directly through WhatsApp. 
+Also allow product orders directly through WhatsApp.
 
---- 
+---
 
-Google Maps Integration 
+Google Maps Integration
 
-Embed interactive Google Maps. 
+Embed interactive Google Maps.
 
-# Features: 
+# Features:
 
-- Office location. 
+- Office location.
 
-- Multiple branches. 
+- Multiple branches.
 
-- Directions. 
+- Directions.
 
-- Service coverage map across Kenya. 
+- Service coverage map across Kenya.
 
---- 
+---
 
-# Contact Page 
+# Contact Page
 
-# Include: 
+# Include:
 
-- Contact form. 
+- Contact form.
 
-- WhatsApp. 
+- WhatsApp.
 
-- Phone. 
+- Phone.
 
-- Email. 
+- Email.
 
-- Office hours. 
+- Office hours.
 
-- Emergency hotline. 
+- Emergency hotline.
 
---- 
+---
 
-# SEO Roadmap 
+# SEO Roadmap
 
-Technical SEO: 
+Technical SEO:
 
-- Schema.org. 
+- Schema.org.
 
-- Sitemap.xml. 
+- Sitemap.xml.
 
-- Robots.txt. 
+- Robots.txt.
 
-- Canonical URLs. 
+- Canonical URLs.
 
-- Open Graph. 
+- Open Graph.
 
-- Twitter Cards. 
+- Twitter Cards.
 
-- Fast loading. 
+- Fast loading.
 
-- Core Web Vitals above 90. 
+- Core Web Vitals above 90.
 
-# On-page SEO: 
+# On-page SEO:
 
-- H1-H3 structure. 
+- H1-H3 structure.
 
-- Meta titles. 
+- Meta titles.
 
-- Meta descriptions. 
+- Meta descriptions.
 
-- FAQ schema. 
+- FAQ schema.
 
-- Local SEO for Kenya. 
+- Local SEO for Kenya.
 
-# Content Strategy: 
+# Content Strategy:
 
-- 3 blog posts weekly. 
+- 3 blog posts weekly.
 
-- Service pages for every major Kenyan town. 
+- Service pages for every major Kenyan town.
 
-- Project case studies monthly. 
+- Project case studies monthly.
 
-# Keywords: 
+# Keywords:
 
-- Electrical contractors Kenya. 
+- Electrical contractors Kenya.
 
-- Solar installation Kenya. 
+- Solar installation Kenya.
 
-- Fire equipment suppliers Kenya. 
+- Fire equipment suppliers Kenya.
 
-- Electrical maintenance Nairobi. 
+- Electrical maintenance Nairobi.
 
-- Industrial electrical services Kenya. 
+- Industrial electrical services Kenya.
 
---- 
+---
 
-# DevOps Ready Architecture 
+# DevOps Ready Architecture
 
-# Frontend: 
+# Frontend:
 
-- Next.js. 
+- Next.js.
 
-- React. 
+- React.
 
-- Tailwind CSS. 
+- Tailwind CSS.
 
-- TypeScript. 
+- TypeScript.
 
-# Backend: 
+# Backend:
 
-- Node.js. 
+- Node.js.
 
-- Express. 
+- Express.
 
-- PostgreSQL. 
+- PostgreSQL.
 
-- Prisma ORM. 
+- Prisma ORM.
 
-Infrastructure: 
+Infrastructure:
 
-- Docker. 
+- Docker.
 
-- Nginx. 
+- Nginx.
 
-- GitHub. 
+- GitHub.
 
-- GitHub Actions. 
+- GitHub Actions.
 
-- Vercel frontend. 
+- Vercel frontend.
 
-- AWS/DigitalOcean backend. 
+- AWS/DigitalOcean backend.
 
-- Cloudflare CDN. 
+- Cloudflare CDN.
 
---- 
+---
 
-# CI/CD Pipeline 
+# CI/CD Pipeline
 
-# GitHub Actions should: 
+# GitHub Actions should:
 
-1. Run ESLint. 
+1. Run ESLint.
 
-2. Run tests. 
+2. Run tests.
 
-3. Build application. 
+3. Build application.
 
-4. Build Docker image. 
+4. Build Docker image.
 
-5. Push to registry. 
+5. Push to registry.
 
-6. Deploy automatically. 
+6. Deploy automatically.
 
-7. Run health checks. 
+7. Run health checks.
 
-8. Roll back if deployment fails. 
+8. Roll back if deployment fails.
 
---- 
+---
 
-# Security Requirements 
+# Security Requirements
 
-- HTTPS. 
+- HTTPS.
 
-- JWT authentication. 
+- JWT authentication.
 
-- Google reCAPTCHA. 
+- Google reCAPTCHA.
 
-- Rate limiting. 
+- Rate limiting.
 
-- Input validation. 
+- Input validation.
 
-- SQL injection protection. 
+- SQL injection protection.
 
-- XSS protection. 
+- XSS protection.
 
-- CSP headers. 
+- CSP headers.
 
---- 
+---
 
-# Performance 
+# Performance
 
-- Lighthouse score above 95. 
+- Lighthouse score above 95.
 
-- Lazy loading. 
+- Lazy loading.
 
-- Image optimization. 
+- Image optimization.
 
-- CDN caching. 
+- CDN caching.
 
-- Server-side rendering. 
+- Server-side rendering.
 
---- 
+---
 
-# CMS 
+# CMS
 
-# Include an admin dashboard to manage: 
+# Include an admin dashboard to manage:
 
-- Services. 
+- Services.
 
-- Products. 
+- Products.
 
-- Blog posts. 
+- Blog posts.
 
-- Projects. 
+- Projects.
 
-- Testimonials. 
+- Testimonials.
 
-- Quote requests. 
+- Quote requests.
 
-- WhatsApp inquiries. 
+- WhatsApp inquiries.
 
---- 
+---
 
-# Lead Generation 
+# Lead Generation
 
-- Sticky WhatsApp button. 
+- Sticky WhatsApp button.
 
-- Free quotation popup. 
+- Free quotation popup.
 
-- Newsletter signup. 
+- Newsletter signup.
 
-- Downloadable company profile PDF. 
+- Downloadable company profile PDF.
 
-- Request site visit form. 
+- Request site visit form.
 
-Build the website to production standards with scalable architecture, SEO-first content, DevOps automation, CI/CD deployment, analytics integration, blog CMS, Google Maps, WhatsApp Business automation, 
+Build the website to production standards with scalable architecture, SEO-first content, DevOps automation, CI/CD deployment, analytics integration, blog CMS, Google Maps, WhatsApp Business automation,
 
 and a premium engineering company user experience.
 

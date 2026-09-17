@@ -76,14 +76,40 @@ export const serviceGroups: ServiceGroup[] = [
     metaDescription:
       "EPRA-licensed electrical contractors in Kenya. Wiring, power distribution, generator installation, lighting, automation and maintenance for homes, industry and institutions.",
     items: [
-      { title: "Electrical installations", description: "New builds, fit-outs and phased installations with full test certificates." },
-      { title: "Wiring and rewiring", description: "Safe replacement of ageing circuits in homes, apartments and commercial blocks." },
-      { title: "Power distribution", description: "LV/MV panels, changeover systems, busbars, load balancing and metering." },
-      { title: "Generator installation", description: "Sizing, civil works, ATS integration, commissioning and service contracts." },
-      { title: "Electrical maintenance", description: "Planned preventive maintenance, thermal imaging and 24/7 emergency callout." },
-      { title: "Lighting systems", description: "LED retrofits, warehouse high-bay, street and perimeter lighting design." },
-      { title: "Smart home automation", description: "Lighting scenes, access control, CCTV integration and remote monitoring." },
-      { title: "Electrical inspections", description: "Compliance audits, earth testing and certification for insurers and regulators." },
+      {
+        title: "Electrical installations",
+        description: "New builds, fit-outs and phased installations with full test certificates.",
+      },
+      {
+        title: "Wiring and rewiring",
+        description:
+          "Safe replacement of ageing circuits in homes, apartments and commercial blocks.",
+      },
+      {
+        title: "Power distribution",
+        description: "LV/MV panels, changeover systems, busbars, load balancing and metering.",
+      },
+      {
+        title: "Generator installation",
+        description: "Sizing, civil works, ATS integration, commissioning and service contracts.",
+      },
+      {
+        title: "Electrical maintenance",
+        description: "Planned preventive maintenance, thermal imaging and 24/7 emergency callout.",
+      },
+      {
+        title: "Lighting systems",
+        description: "LED retrofits, warehouse high-bay, street and perimeter lighting design.",
+      },
+      {
+        title: "Smart home automation",
+        description: "Lighting scenes, access control, CCTV integration and remote monitoring.",
+      },
+      {
+        title: "Electrical inspections",
+        description:
+          "Compliance audits, earth testing and certification for insurers and regulators.",
+      },
     ],
   },
   {
@@ -96,14 +122,38 @@ export const serviceGroups: ServiceGroup[] = [
     metaDescription:
       "Solar installation in Kenya for homes, businesses and industry. Grid-tied and hybrid systems, inverters, battery storage, solar water heating and energy audits.",
     items: [
-      { title: "Residential solar systems", description: "Hybrid systems sized to your bill, with battery backup for blackouts." },
-      { title: "Commercial solar systems", description: "Rooftop PV for offices, retail and hotels with clear payback modelling." },
-      { title: "Industrial solar plants", description: "High-capacity plants, net metering support and grid compliance." },
-      { title: "Solar water heaters", description: "EPRA-compliant hot water for homes, hotels and hospitals." },
-      { title: "Inverters", description: "Supply, installation and replacement of hybrid and string inverters." },
-      { title: "Battery storage", description: "Lithium and tubular storage sized for real overnight loads." },
-      { title: "Solar maintenance", description: "Cleaning, panel testing, inverter servicing and remote monitoring." },
-      { title: "Energy audits", description: "Metered load studies that show exactly where your power spend goes." },
+      {
+        title: "Residential solar systems",
+        description: "Hybrid systems sized to your bill, with battery backup for blackouts.",
+      },
+      {
+        title: "Commercial solar systems",
+        description: "Rooftop PV for offices, retail and hotels with clear payback modelling.",
+      },
+      {
+        title: "Industrial solar plants",
+        description: "High-capacity plants, net metering support and grid compliance.",
+      },
+      {
+        title: "Solar water heaters",
+        description: "EPRA-compliant hot water for homes, hotels and hospitals.",
+      },
+      {
+        title: "Inverters",
+        description: "Supply, installation and replacement of hybrid and string inverters.",
+      },
+      {
+        title: "Battery storage",
+        description: "Lithium and tubular storage sized for real overnight loads.",
+      },
+      {
+        title: "Solar maintenance",
+        description: "Cleaning, panel testing, inverter servicing and remote monitoring.",
+      },
+      {
+        title: "Energy audits",
+        description: "Metered load studies that show exactly where your power spend goes.",
+      },
     ],
   },
   {
@@ -116,14 +166,38 @@ export const serviceGroups: ServiceGroup[] = [
     metaDescription:
       "Fire alarm systems, extinguishers, hydrants, sprinklers, smoke detection and fire risk assessment across Kenya. Certified installation and annual servicing.",
     items: [
-      { title: "Fire alarm systems", description: "Addressable and conventional panels, zoning, sounders and cause-and-effect." },
-      { title: "Fire extinguishers", description: "Supply, wall mounting, signage, refilling and annual certification." },
-      { title: "Fire hydrants", description: "Hydrant rings, landing valves, hose reels and pump house works." },
-      { title: "Sprinkler systems", description: "Wet and dry riser design, installation and hydraulic testing." },
-      { title: "Smoke detectors", description: "Optical, heat and multi-sensor detection correctly sited per zone." },
-      { title: "Emergency lighting", description: "Escape route lighting and exit signage with battery backup." },
-      { title: "Fire suppression systems", description: "Kitchen, server room and gas suppression for critical spaces." },
-      { title: "Fire risk assessment", description: "Documented assessments and evacuation plans for compliance filing." },
+      {
+        title: "Fire alarm systems",
+        description: "Addressable and conventional panels, zoning, sounders and cause-and-effect.",
+      },
+      {
+        title: "Fire extinguishers",
+        description: "Supply, wall mounting, signage, refilling and annual certification.",
+      },
+      {
+        title: "Fire hydrants",
+        description: "Hydrant rings, landing valves, hose reels and pump house works.",
+      },
+      {
+        title: "Sprinkler systems",
+        description: "Wet and dry riser design, installation and hydraulic testing.",
+      },
+      {
+        title: "Smoke detectors",
+        description: "Optical, heat and multi-sensor detection correctly sited per zone.",
+      },
+      {
+        title: "Emergency lighting",
+        description: "Escape route lighting and exit signage with battery backup.",
+      },
+      {
+        title: "Fire suppression systems",
+        description: "Kitchen, server room and gas suppression for critical spaces.",
+      },
+      {
+        title: "Fire risk assessment",
+        description: "Documented assessments and evacuation plans for compliance filing.",
+      },
     ],
   },
 ];
