@@ -344,12 +344,19 @@ function Home() {
           </Link>
         </div>
         <div className="overflow-hidden rounded border border-border">
-          <iframe
-            title="Baseline Power Systems office location on Google Maps"
-            src="https://www.google.com/maps?q=10+Masaba+Rd+Nairobi+Kenya&output=embed"
-            loading="lazy"
-            className="h-72 w-full"
-          />
+          <a
+            href="https://maps.app.goo.gl/1V3RZxqNcdY32Qtz8"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open office location in Google Maps"
+          >
+            <iframe
+              title="Baseline Power Systems office location on Google Maps"
+              src="https://www.google.com/maps?q=10+Masaba+Rd+Nairobi+Kenya&output=embed"
+              loading="lazy"
+              className="h-72 w-full pointer-events-none"
+            />
+          </a>
         </div>
       </section>
     </>
