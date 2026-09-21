@@ -1,0 +1,13 @@
+name = "baseline-power"
+compatibility_date = "2024-09-25"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "baseline-power-db"
+database_id = "placeholder-replace-with-actual-id"
+
+# R2 Bucket binding (for future image uploads)
+# [[r2_buckets]]
+# binding = "R2"
+# bucket_name = "baseline-power-images"
