@@ -114,12 +114,11 @@ const credentials = [
 ];
 
 const partners = [
-  { name: "Schneider Electric", logo: "/partners/schneider.svg" },
-  { name: "ABB", logo: "/partners/abb.svg" },
-  { name: "Legrand", logo: "/partners/legrand.svg" },
-  { name: "JA Solar", logo: "/partners/ja-solar.svg" },
-  { name: "Fronius", logo: "/partners/fronius.svg" },
-  { name: "Hikvision", logo: "/partners/hikvision.svg" },
+  { name: "Kenya Power", logo: "/partners/kenya-power-logo.png" },
+  { name: "Kenya Power (REA)", logo: "/partners/rea-logo.jpg" },
+  { name: "EAPC", logo: "/partners/eapc-logo.png" },
+  { name: "KEMSA", logo: "/partners/kemsa-logo.png" },
+  { name: "Baseline Power", logo: "/partners/baseline-logo.png" },
 ];
 
 function Home() {
@@ -273,28 +272,32 @@ function Home() {
       </section>
 
       {/* Partners */}
-      <section className="container-page py-16">
-        <h2 className="text-2xl font-bold sm:text-3xl">Trusted by leading brands</h2>
-        <p className="mt-3 text-muted-foreground">
-          We partner with established manufacturers and suppliers to deliver quality components and
-          warranties on every installation.
-        </p>
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {partners.map((p) => (
-            <div
-              key={p.name}
-              className="flex h-20 items-center justify-center rounded border border-border bg-card px-4"
-            >
-              <img
-                src={p.logo}
-                alt={`${p.name} logo`}
-                loading="lazy"
-                width={160}
-                height={60}
-                className="max-h-10 w-auto object-contain opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-              />
-            </div>
-          ))}
+      <section className="py-16">
+        <div className="container-page">
+          <h2 className="text-2xl font-bold sm:text-3xl">Trusted by leading brands</h2>
+          <p className="mt-3 text-muted-foreground">
+            We partner with established manufacturers and suppliers to deliver quality components
+            and warranties on every installation.
+          </p>
+        </div>
+        <div className="mt-8 overflow-hidden">
+          <div className="partner-scroll flex w-max gap-4 px-4">
+            {[...partners, ...partners, ...partners].map((p, i) => (
+              <div
+                key={`${p.name}-${i}`}
+                className="flex h-24 shrink-0 items-center justify-center overflow-hidden rounded border border-border bg-card px-6 py-3 sm:h-28"
+              >
+                <img
+                  src={p.logo}
+                  alt={`${p.name} logo`}
+                  loading="lazy"
+                  width={200}
+                  height={80}
+                  className="max-h-full w-auto max-w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
