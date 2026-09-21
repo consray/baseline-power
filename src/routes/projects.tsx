@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { projects, projectCategories, type Project, type ProjectCategory } from "@/lib/projects";
+import { fetchProjects } from "./api/projects.server";
+import { projectCategories, type Project, type ProjectCategory } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectFilter } from "@/components/project-filter";
 import { ProjectDetail } from "@/components/project-detail";
@@ -27,10 +28,15 @@ export const Route = createFileRoute("/projects")({
     ],
     links: [{ rel: "canonical", href: "/projects" }],
   }),
+  loader: async () => {
+    const projects = await fetchProjects();
+    return { projects };
+  },
   component: Projects,
 });
 
 function Projects() {
+  const { projects } = Route.useLoaderData();
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("All Projects");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
