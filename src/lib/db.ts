@@ -1,5 +1,5 @@
 import type { Project, ProjectCategory } from "./projects";
-import { fallbackProjects } from "./projects";
+import { fallbackProjects } from "./fallback-projects";
 
 // D1 row type (maps from database to application)
 interface ProjectRow {
