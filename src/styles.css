@@ -114,3 +114,21 @@
   max-width: 80rem;
   padding-inline: 1.25rem;
 }
+
+/* Partner logo carousel — continuous scroll */
+@keyframes partner-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.partner-scroll {
+  animation: partner-scroll 25s linear infinite;
+}
+
+.partner-scroll:hover {
+  animation-play-state: paused;
+}
