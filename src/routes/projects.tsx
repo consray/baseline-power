@@ -66,7 +66,11 @@ function Projects() {
           onChange={setActiveCategory}
         />
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          id="project-filter-panel"
+          role="tabpanel"
+          className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {filtered.map((project) => (
             <ProjectCard key={project.id} project={project} onSelect={setSelectedProject} />
           ))}

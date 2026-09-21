@@ -41,8 +41,8 @@ export const Route = createFileRoute("/")({
           email: company.email,
           address: {
             "@type": "PostalAddress",
-            streetAddress: "10 Masaba Rd",
-            addressLocality: "Nairobi",
+            streetAddress: company.address.split(",")[0],
+            addressLocality: company.address.split(",")[1]?.trim() || "Nairobi",
             addressCountry: "KE",
           },
           areaServed: "Kenya",

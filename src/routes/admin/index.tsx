@@ -24,7 +24,7 @@ export const Route = createFileRoute("/admin/")({
 function AdminDashboard() {
   const { projects, services, quotes, messages } = Route.useLoaderData();
 
-  const publishedCount = projects.filter((p: Project) => p.challenge).length;
+  const publishedCount = projects.filter((p: Project) => p.published !== false).length;
   const draftCount = projects.length - publishedCount;
   const newQuotes = quotes.filter((q: { status: string }) => q.status === "new").length;
   const newMessages = messages.filter((m: { status: string }) => m.status === "new").length;

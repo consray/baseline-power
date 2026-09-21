@@ -1,5 +1,6 @@
 import type { Project, ProjectCategory } from "./projects";
 import { fallbackProjects } from "./fallback-projects";
+import { serviceGroups } from "./company";
 
 // D1 row type (maps from database to application)
 interface ProjectRow {
@@ -23,6 +24,24 @@ interface ProjectRow {
 
 // Convert D1 row to Project type
 function rowToProject(row: ProjectRow): Project {
+  let images: string[] = [];
+  try {
+    images = row.images ? JSON.parse(row.images) : [];
+  } catch {
+    console.error(`[db] Failed to parse images for project ${row.id}`);
+    images = [];
+  }
+
+  let scope: string[] | undefined;
+  if (row.scope) {
+    try {
+      scope = JSON.parse(row.scope);
+    } catch {
+      console.error(`[db] Failed to parse scope for project ${row.id}`);
+      scope = undefined;
+    }
+  }
+
   const project: Project = {
     id: row.id,
     title: row.title,
@@ -31,13 +50,13 @@ function rowToProject(row: ProjectRow): Project {
     category: row.category as ProjectCategory,
     description: row.description,
     coverImage: row.cover_image ?? "",
-    images: row.images ? JSON.parse(row.images) : [],
+    images,
+    published: row.published === 1,
   };
 
-  // Only add optional properties if they have values
   if (row.challenge) project.challenge = row.challenge;
   if (row.approach) project.approach = row.approach;
-  if (row.scope) project.scope = JSON.parse(row.scope);
+  if (scope) project.scope = scope;
   if (row.result) project.result = row.result;
 
   return project;
@@ -322,20 +341,7 @@ function rowToService(row: ServiceRow, items: ServiceItemRow[] = []): Service {
   };
 }
 
-function rowToServiceItem(row: ServiceItemRow): ServiceItem {
-  return {
-    id: row.id,
-    serviceId: row.service_id,
-    title: row.title,
-    description: row.description,
-    sortOrder: row.sort_order,
-  };
-}
-
 function fallbackServices(): Service[] {
-  // Re-export the hardcoded data as the fallback
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const { serviceGroups } = require("./company") as typeof import("./company");
   return serviceGroups.map((g, i) => ({
     id: `fallback-${g.slug}`,
     slug: g.slug,

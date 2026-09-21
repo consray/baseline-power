@@ -1,8 +1,7 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { X } from "lucide-react";
 import type { Project } from "@/lib/projects";
 import { ProjectGallery } from "./project-gallery";
-import { useState } from "react";
 
 interface ProjectDetailProps {
   project: Project;
@@ -21,11 +20,12 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
   );
 
   useEffect(() => {
+    const prev = document.body.style.overflow;
     document.addEventListener("keydown", handleKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = prev;
     };
   }, [handleKey]);
 

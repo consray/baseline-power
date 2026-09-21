@@ -25,6 +25,7 @@ function ProjectForm() {
     scope: [] as string[],
     result: "",
     coverImage: "",
+    published: true,
   });
 
   const [newScopeItem, setNewScopeItem] = useState("");
@@ -63,6 +64,7 @@ function ProjectForm() {
         description: form.description,
         coverImage: form.coverImage || "",
         images: form.coverImage ? [form.coverImage] : [],
+        published: form.published,
       };
 
       // Only add optional fields if they have values
@@ -289,6 +291,22 @@ function ProjectForm() {
           />
           <p className="mt-1 text-xs text-muted-foreground">
             Paste a URL to the project cover image. Image uploads coming soon.
+          </p>
+        </div>
+
+        {/* Published */}
+        <div>
+          <label className="flex items-center gap-2 text-sm font-medium">
+            <input
+              type="checkbox"
+              checked={form.published}
+              onChange={(e) => setForm((prev) => ({ ...prev, published: e.target.checked }))}
+              className="size-4 rounded border-border"
+            />
+            Published
+          </label>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Unpublished projects are hidden from the public site.
           </p>
         </div>
 

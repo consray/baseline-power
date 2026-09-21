@@ -30,3 +30,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal reports
+QA-REPORT.md
+REMEDIATION-REPORT.md
+AUDIT.md

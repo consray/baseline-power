@@ -16,8 +16,12 @@ function AdminProjectsList() {
 
   const handleDelete = async (id: string, title: string) => {
     if (confirm(`Delete "${title}"? This cannot be undone.`)) {
-      await deleteExistingProject({ data: { id } });
-      navigate({ to: "/admin/projects", replace: true });
+      try {
+        await deleteExistingProject({ data: { id } });
+        navigate({ to: "/admin/projects", replace: true });
+      } catch (err) {
+        alert(err instanceof Error ? err.message : "Failed to delete project");
+      }
     }
   };
 
@@ -75,12 +79,12 @@ function AdminProjectsList() {
                 <td className="px-4 py-3">
                   <span
                     className={`inline-block rounded px-2 py-0.5 text-xs font-medium ${
-                      project.challenge
+                      project.published !== false
                         ? "bg-green-100 text-green-800"
                         : "bg-yellow-100 text-yellow-800"
                     }`}
                   >
-                    {project.challenge ? "Published" : "Draft"}
+                    {project.published !== false ? "Published" : "Draft"}
                   </span>
                 </td>
                 <td className="px-4 py-3 text-right">
@@ -95,6 +99,7 @@ function AdminProjectsList() {
                     <button
                       type="button"
                       onClick={() => handleDelete(project.id, project.title)}
+                      aria-label={`Delete ${project.title}`}
                       className="inline-flex items-center gap-1 rounded border border-red-200 px-2 py-1 text-xs text-red-600 hover:bg-red-50"
                     >
                       <Trash2 className="size-3" /> Delete

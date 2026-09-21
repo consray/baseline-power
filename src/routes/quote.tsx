@@ -59,7 +59,15 @@ function QuotePage() {
           ))}
         </dl>
         <p className="mt-8 text-sm text-muted-foreground">
-          Prefer to talk? Call {company.phone} or email {company.email}.
+          Prefer to talk?{" "}
+          <a href={company.phoneHref} className="text-primary hover:underline">
+            Call {company.phone}
+          </a>{" "}
+          or{" "}
+          <a href={`mailto:${company.email}`} className="text-primary hover:underline">
+            email {company.email}
+          </a>
+          .
         </p>
       </div>
       <QuoteForm />

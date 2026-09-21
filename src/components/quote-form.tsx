@@ -22,6 +22,7 @@ export function QuoteForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [details, setDetails] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const message = [
     `*Quote request — ${company.name}*`,
@@ -39,7 +40,17 @@ export function QuoteForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
+    const opened = window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
+    if (opened) {
+      setSubmitted(true);
+      setName("");
+      setPhone("");
+      setDetails("");
+    } else {
+      alert(
+        "Pop-up was blocked. Please allow pop-ups for this site or copy the message and send it via WhatsApp manually.",
+      );
+    }
   }
 
   return (
@@ -128,6 +139,11 @@ export function QuoteForm() {
         Your answers are formatted into a WhatsApp message and sent to our team. We respond within
         one working hour.
       </p>
+      {submitted && (
+        <div className="rounded border border-green-200 bg-green-50 p-3 text-sm text-green-800">
+          Quote request sent via WhatsApp. Our engineers will respond within one working hour.
+        </div>
+      )}
     </form>
   );
 }

@@ -30,6 +30,7 @@ function ProjectEditForm() {
     scope: project.scope ?? [],
     result: project.result ?? "",
     coverImage: project.coverImage ?? "",
+    published: project.published !== false,
   });
 
   const [newScopeItem, setNewScopeItem] = useState("");
@@ -68,13 +69,12 @@ function ProjectEditForm() {
         description: form.description,
         coverImage: form.coverImage || "",
         images: form.coverImage ? [form.coverImage] : [],
+        challenge: form.challenge || null,
+        approach: form.approach || null,
+        scope: form.scope.length > 0 ? form.scope : null,
+        result: form.result || null,
+        published: form.published,
       };
-
-      // Only add optional fields if they have values
-      if (form.challenge) updates.challenge = form.challenge;
-      if (form.approach) updates.approach = form.approach;
-      if (form.scope.length > 0) updates.scope = form.scope;
-      if (form.result) updates.result = form.result;
 
       await updateExistingProject({ data: { id: project.id, updates } });
       navigate({ to: "/admin/projects" });
@@ -288,6 +288,22 @@ function ProjectEditForm() {
           />
           <p className="mt-1 text-xs text-muted-foreground">
             Paste a URL to the project cover image. Image uploads coming soon.
+          </p>
+        </div>
+
+        {/* Published */}
+        <div>
+          <label className="flex items-center gap-2 text-sm font-medium">
+            <input
+              type="checkbox"
+              checked={form.published}
+              onChange={(e) => setForm((prev) => ({ ...prev, published: e.target.checked }))}
+              className="size-4 rounded border-border"
+            />
+            Published
+          </label>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Unpublished projects are hidden from the public site.
           </p>
         </div>
 

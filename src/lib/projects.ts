@@ -14,12 +14,13 @@ export interface Project {
   year: string;
   category: ProjectCategory;
   description: string;
-  challenge?: string;
-  approach?: string;
-  scope?: string[];
-  result?: string;
+  challenge?: string | null;
+  approach?: string | null;
+  scope?: string[] | null;
+  result?: string | null;
   coverImage: string;
   images: string[];
+  published?: boolean;
 }
 
 export const projectCategories: ProjectCategory[] = [

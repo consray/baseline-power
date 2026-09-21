@@ -30,9 +30,10 @@ export function ProjectGallery({ images, startIndex = 0, onClose }: ProjectGalle
   }, [onClose, goPrev, goNext]);
 
   useEffect(() => {
+    const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = prev;
     };
   }, []);
 
@@ -74,7 +75,14 @@ export function ProjectGallery({ images, startIndex = 0, onClose }: ProjectGalle
       )}
 
       {image && (
-        <img src={image.src} alt={image.alt} className="max-h-[85vh] max-w-[90vw] object-contain" />
+        <img
+          src={image.src}
+          alt={image.alt}
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/placeholder-project.jpg";
+          }}
+          className="max-h-[85vh] max-w-[90vw] object-contain"
+        />
       )}
 
       {images.length > 1 && (

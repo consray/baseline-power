@@ -38,7 +38,6 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
   const router = useRouter();
   useEffect(() => {
     reportError(error, { boundary: "tanstack_root_error_component" });
@@ -63,12 +62,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
-          <a
-            href="/"
+          <Link
+            to="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -96,6 +95,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Licensed electrical, solar and fire safety contractors serving Nairobi and all 47 counties. Free site survey and same-day quotations.",
       },
       { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content: "https://baselinepower.co.ke/og-image.png",
+      },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -119,6 +122,12 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[9999] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:text-sm"
+        >
+          Skip to content
+        </a>
         {children}
         <Scripts />
       </body>
@@ -132,7 +141,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-      <main className="pt-16 md:pt-[6.25rem]">
+      <main id="main-content" className="pt-16 md:pt-[6.25rem]">
         <Outlet />
       </main>
       <SiteFooter />

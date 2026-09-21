@@ -2,7 +2,6 @@ export const company = {
   name: "Baseline Power Systems",
   short: "Baseline Power",
   tagline: "Electrical, solar and fire safety engineering across Kenya",
-  // TODO: replace the placeholder contact details below with the real ones.
   phone: "+254 704 777 877",
   phoneHref: "tel:+254704777877",
   emergency: "+254 700 000 001",

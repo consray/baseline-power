@@ -35,10 +35,23 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [submitted, setSubmitted] = useState(false);
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const text = `*Website enquiry — ${company.name}*\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || "-"}\n\n${message}`;
-    window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
+    const opened = window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
+    if (opened) {
+      setSubmitted(true);
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+    } else {
+      alert(
+        "Pop-up was blocked. Please allow pop-ups for this site or copy the message and send it via WhatsApp manually.",
+      );
+    }
   }
 
   return (
@@ -85,10 +98,13 @@ function Contact() {
             <Clock className="size-4 shrink-0 text-primary" aria-hidden="true" />
             <span>{company.hours}</span>
           </div>
-          <div className="flex items-center gap-3 rounded border-2 border-secondary bg-card px-4 py-3 text-sm">
+          <a
+            href={`tel:${company.emergency.replace(/\s/g, "")}`}
+            className="flex items-center gap-3 rounded border-2 border-secondary bg-card px-4 py-3 text-sm"
+          >
             <AlertTriangle className="size-4 shrink-0 text-secondary" aria-hidden="true" />
             <span className="font-medium">24/7 emergency: {company.emergency}</span>
-          </div>
+          </a>
         </div>
 
         {/* Form + Map */}
@@ -143,6 +159,11 @@ function Contact() {
               <MessageCircle className="size-4" aria-hidden="true" /> Send via WhatsApp
             </button>
           </form>
+          {submitted && (
+            <div className="rounded border border-green-200 bg-green-50 p-3 text-sm text-green-800">
+              Message sent via WhatsApp. Our team will respond within one working hour.
+            </div>
+          )}
 
           <div className="overflow-hidden rounded border border-border">
             <a

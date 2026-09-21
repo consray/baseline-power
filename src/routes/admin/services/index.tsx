@@ -17,8 +17,12 @@ function AdminServicesList() {
 
   const handleDelete = async (id: string, name: string) => {
     if (confirm(`Delete "${name}"? This will also remove all its service items.`)) {
-      await deleteExistingService({ data: { id } });
-      navigate({ to: "/admin/services", replace: true });
+      try {
+        await deleteExistingService({ data: { id } });
+        navigate({ to: "/admin/services", replace: true });
+      } catch (err) {
+        alert(err instanceof Error ? err.message : "Failed to delete service");
+      }
     }
   };
 
@@ -95,6 +99,7 @@ function AdminServicesList() {
                     <button
                       type="button"
                       onClick={() => handleDelete(service.id, service.name)}
+                      aria-label={`Delete ${service.name}`}
                       className="inline-flex items-center gap-1 rounded border border-red-200 px-2 py-1 text-xs text-red-600 hover:bg-red-50"
                     >
                       <Trash2 className="size-3" /> Delete
