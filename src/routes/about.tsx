@@ -41,29 +41,6 @@ const pillars = [
   },
 ];
 
-const team = [
-  {
-    name: "Eng. Samuel Otieno",
-    role: "Managing Director",
-    note: "18 years in LV/MV distribution and industrial projects.",
-  },
-  {
-    name: "Eng. Grace Mutiso",
-    role: "Head of Solar",
-    note: "Delivered over 6MW of commercial and industrial PV.",
-  },
-  {
-    name: "Daniel Kiprotich",
-    role: "Fire Safety Manager",
-    note: "NFPA-trained, leads detection and suppression works.",
-  },
-  {
-    name: "Faith Achieng",
-    role: "HSE & Quality Lead",
-    note: "Owns method statements, permits and site audits.",
-  },
-];
-
 const licences = [
   "EPRA Electrical Contractor Licence — Class A",
   "National Construction Authority (NCA) registration",
@@ -106,22 +83,6 @@ function About() {
               <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Leadership team — no monogram circles, clean layout */}
-      <section className="bg-surface py-12">
-        <div className="container-page">
-          <h2 className="text-2xl font-bold">Leadership team</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((m) => (
-              <article key={m.name} className="rounded border border-border bg-card p-4">
-                <h3 className="font-semibold">{m.name}</h3>
-                <p className="mt-0.5 text-sm font-medium text-primary">{m.role}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{m.note}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
