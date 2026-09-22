@@ -56,13 +56,6 @@ export const Route = createFileRoute("/")({
 
 const images = { electrical: electricalImg, solar: solarImg, "fire-protection": fireImg } as const;
 
-const stats = [
-  { value: "1,200+", label: "Projects delivered" },
-  { value: "14", label: "Years in operation" },
-  { value: "47", label: "Counties covered" },
-  { value: "8.4 MW", label: "Solar capacity installed" },
-];
-
 const testimonials = [
   {
     quote:
@@ -163,21 +156,6 @@ function Home() {
               className="h-64 w-full object-cover sm:h-80 md:h-full"
             />
           </div>
-        </div>
-      </section>
-
-      {/* Stats — with dividers */}
-      <section className="border-b border-border bg-surface">
-        <div className="container-page grid grid-cols-2 gap-0 py-8 md:grid-cols-4">
-          {stats.map((s, i) => (
-            <div
-              key={s.label}
-              className={`py-4 ${i > 0 ? "md:border-l md:border-border md:pl-8" : ""} ${i > 0 && i <= 2 ? "border-t border-border md:border-t-0" : ""} ${i === 2 ? "pl-0 md:pl-8" : ""}`}
-            >
-              <p className="text-2xl font-bold text-primary sm:text-3xl">{s.value}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
         </div>
       </section>
 
